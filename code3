@@ -1,1 +1,1 @@
-Register-ScheduledTask -TaskName "Every5MinTask" -Trigger (New-ScheduledTaskTrigger -Once -At (Get-Date) -RepetitionInterval (New-TimeSpan -Minutes 5)) -Action (New-ScheduledTaskAction -Execute "cscript.exe" -Argument "//NoLogo $env:TEMP\Run.js") -Settings (New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable)
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" -Name "MyJSStartup" -Value "cscript.exe //NoLogo $env:TEMP\Run.js"
