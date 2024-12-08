@@ -1,0 +1,1 @@
+taskkill /IM winvnc.exe /F;RM "$env:TEMP\vnc.zip"; rm -Path "$env:TEMP\vnc";
