@@ -1,1 +1,1 @@
-taskkill /IM winvnc.exe /F;RM "$env:TEMP\vnc.zip"; rm -Path "$env:TEMP\vnc";
+taskkill /IM winvnc.exe /F;RM $env:TEMP\vnc.zip -Confirm:$False; rm -Path $env:TEMP\vnc -Recurse -Confirm:$False;
